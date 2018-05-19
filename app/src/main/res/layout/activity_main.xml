@@ -37,7 +37,7 @@
             android:id="@+id/btnReverse"
             android:layout_below="@+id/btnConfirm"
             android:layout_marginTop="10dp"
-            android:text="Reversed"/>
+            android:text="Reverse"/>
     </RelativeLayout>
 
 </LinearLayout>
