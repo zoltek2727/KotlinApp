@@ -24,5 +24,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-//Branch test
-//Pigeon was here
