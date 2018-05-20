@@ -5,35 +5,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".QuestionActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/que1"
+            android:minHeight="200dp"
+            android:id="@+id/photo"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Drugi widok"
+            android:text="Odpowiedź"
             android:textColor="@color/colorAccent"
-            android:id="@+id/tvLabel"
-            android:layout_centerInParent="true"/>
-        <ImageView
+            android:id="@+id/tvLabelAnswer"
+            android:layout_below="@+id/photo"
+            android:layout_centerHorizontal="true"/>
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/tvLabel"
-            android:src="@drawable/face"
-            android:id="@+id/btnFace"/>
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sbText"/>
-        <ImageButton
+            android:layout_below="@+id/tvLabelAnswer"
+            android:text="Click"
+            android:id="@+id/btnButton" />
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/sbText"
-            android:id="@+id/btnQuestion"
-            android:src="@mipmap/que1"/>
+            android:text="Check"
+            android:layout_toRightOf="@+id/btnButton"
+            android:layout_below="@+id/tvLabelAnswer"
+            android:id="@+id/btnCheck"/>
     </RelativeLayout>
 
 </LinearLayout>

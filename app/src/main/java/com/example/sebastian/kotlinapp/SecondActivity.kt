@@ -1,5 +1,6 @@
 package com.example.sebastian.kotlinapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.SeekBar
@@ -14,6 +15,11 @@ class SecondActivity : AppCompatActivity() {
 
         btnFace.setOnClickListener {
             Toast.makeText(this, "Buźka!", Toast.LENGTH_LONG).show()
+        }
+
+        btnQuestion.setOnClickListener {
+            val intent = Intent(this, QuestionActivity::class.java)
+            startActivity(intent)
         }
 
         sbText.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
