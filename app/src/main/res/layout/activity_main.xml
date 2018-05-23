@@ -10,41 +10,40 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Prosty tekst"
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/tvLabel"
-            android:layout_centerInParent="true"/>
-        <EditText
+        <LinearLayout
+            android:weightSum="6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvLabel"
-            android:id="@+id/etText"
-            android:hint="Wpisz tekst"
-            android:textAlignment="center"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnConfirm"
-            android:layout_below="@+id/etText"
-            android:layout_marginTop="10dp"
-            android:text="Confirm"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnReverse"
-            android:layout_below="@+id/btnConfirm"
-            android:layout_marginTop="10dp"
-            android:text="Reverse"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btnReverse"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/forward"
-            android:id="@+id/btnForward"/>
+            android:id="@+id/rlButton"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+            <Space
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnOpen"
+                    android:text="Open" />
+                <Button
+                    android:id="@+id/btnClose"
+                    android:layout_below="@+id/btnOpen"
+                    android:text="Exit"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </RelativeLayout>
+            <Space
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>

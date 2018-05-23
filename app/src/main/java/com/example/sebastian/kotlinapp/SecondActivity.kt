@@ -13,28 +13,9 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        btnFace.setOnClickListener {
-            Toast.makeText(this, "Buźka!", Toast.LENGTH_LONG).show()
-        }
-
         btnQuestion.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             startActivity(intent)
         }
-
-        sbText.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-
-            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
-                tvLabel.text = "Progress : $i"
-            }
-
-            override fun onStartTrackingTouch(seekBar: SeekBar) {
-                Toast.makeText(applicationContext, "start tracking", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onStopTrackingTouch(seekBar: SeekBar) {
-                Toast.makeText(applicationContext, "stop tracking", Toast.LENGTH_SHORT).show()
-            }
-        })
     }
 }

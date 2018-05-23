@@ -15,28 +15,62 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/que1"
             android:minHeight="200dp"
-            android:id="@+id/photo"/>
+            android:id="@+id/photo"
+            android:layout_centerVertical="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Odpowiedź"
+            android:text="Here will be showed question."
             android:textColor="@color/colorAccent"
             android:id="@+id/tvLabelAnswer"
-            android:layout_below="@+id/photo"
+            android:layout_above="@+id/rlAnswers"
             android:layout_centerHorizontal="true"/>
-        <Button
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:weightSum="2"
+            android:id="@+id/rlAnswers"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvLabelAnswer"
-            android:text="Click"
-            android:id="@+id/btnButton" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Check"
-            android:layout_toRightOf="@+id/btnButton"
-            android:layout_below="@+id/tvLabelAnswer"
-            android:id="@+id/btnCheck"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp">
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llFirstAnswers">
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Click"
+                    android:id="@+id/btnButton" />
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check"
+                    android:id="@+id/btnCheck"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@+id/llFirstAnswers"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Answer" />
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humour" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
