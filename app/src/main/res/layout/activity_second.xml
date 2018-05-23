@@ -10,30 +10,34 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Drugi widok"
-            android:textColor="@color/colorAccent"
-            android:id="@+id/tvLabel"
-            android:layout_centerInParent="true"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/tvLabel"
-            android:src="@drawable/face"
-            android:id="@+id/btnFace"/>
-        <SeekBar
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:weightSum="4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sbText"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sbText"
-            android:id="@+id/btnQuestion"
-            android:src="@mipmap/que1"/>
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnQuestion"
+                android:src="@mipmap/que1" />
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/que1"/>
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/que1"/>
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/que1"/>
+        </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
